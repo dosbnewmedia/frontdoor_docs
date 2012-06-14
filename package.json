@@ -9,7 +9,7 @@
 	},
 	"main": "index.coffee",
 	"dependencies": {
-		"ghm": "1.0.x"
+		"ghm": "1.0.x",
 		"coffee-script": "1.3.x"
 	},
 	"devDependencies": {},
