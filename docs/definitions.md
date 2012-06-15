@@ -20,7 +20,7 @@ Die splink-Datenbank, die über die API erreichbar ist, ist eine Graph-Datenbank
 
 ## IDs
 
-Jeder Knoten und jede Kante ist über eine absolut eindeutige ID gekennzeichnet. Diese ID hat 32 Stellen und entspricht UUID v4 ohne Bindestriche.
+Jeder Knoten und jede Kante ist über eine absolut eindeutige ID gekennzeichnet. Diese ID hat 32 Stellen und entspricht *UUID v4* ohne Bindestriche.
 
 	c0f91fde4556482885029fdf0fe89133
 
@@ -30,6 +30,9 @@ Jeder Knoten und jede Kante ist über eine absolut eindeutige ID gekennzeichnet.
 Die Daten der API können über verschiedene Resourcen abfragt werden, die sich für alle Resourcentypen gleich verhalten.
 
 Die Bezeichner der Resourcen werden immer kleingeschrieben. Es ist irrelevant, ob Plural oder Singular für den Bezeichner des Resourcentyps genutzt wird.
+
+	/resource/events
+	/resource/event
 
 ## Collection Resource
 
@@ -45,13 +48,13 @@ Wird an die URL einer *Collection Resource* eine ID angehangen, wird eine einzel
 
 ## IDs-only Resource
 
-Jede *Collection Resource* verfügt zusätzlich über eine Resource, die nur die IDs der Objekte des jeweiligen Typs zurückliefert. Diese ist ist erreichbar indem *_ids* an den Bezeichner angehangen wird
+Jede *Collection Resource* verfügt zusätzlich über eine Resource, die nur die IDs der Objekte des jeweiligen Typs zurückliefert. Diese ist ist erreichbar indem *_ids* an den Bezeichner in Singularform angehangen wird
 
 	/resource/event_ids
 
 ## Top-Level Resourcen
 
-Resourcen, die direkt über den Bezeichner hinter */resource* erreichbar sind, werden *Top-Level Resourcen* genannt. Beispiel:
+Resourcen, die direkt über den Bezeichner hinter */resource/* erreichbar sind, werden *Top-Level Resourcen* genannt. Beispiel:
 
 	/users
 	/events
