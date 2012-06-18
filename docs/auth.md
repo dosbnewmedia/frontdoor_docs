@@ -10,7 +10,7 @@ Zunächst muss mithilfe einer *Client ID* und eines *Client Tokens* ein *Access 
 Da diese Vorgehensweise dem Prinzip von OAuth widerspricht, ist sie auf dem Production-System nicht vorgesehen. In Kürze wird die API erweitert, so dass OAuth-konform ein Login bei splink stattfinden muss und ein *Access Token* an eine Callback-URL zurückgeschickt wird.
 
 
-## Access Token via Email-Adresse und Passwort
+## *Access Token* via Email-Adresse und Passwort
 
 In der Testumgebung ist zur Zeit gestattet, einen *Access Token* über die direkte Übermittlung von Email-Adresse und Passwort zu generieren.
 
@@ -18,6 +18,8 @@ In der Testumgebung ist zur Zeit gestattet, einen *Access Token* über die direk
 		client_id=[id]&client_secret=[secret]&\
 		username=[email]&password=[password]' \
 		'http://api.testing.splink.de/oauth2/token'
+
+**Hinweis:** In dieser Anfrage sind zwei Zugangsdaten-Paare enthalten: Zum einen ist die [Testumgebung](/testing) mit BasicAuth vor jeglichen Zugriffen geschützt (*-u 'usr:pw'*). Diese Zugangsdaten erhalten Sie auf Anfrage. Weiterhin werden in den Parametern der curl-URL die Zugangsdaten des einzuloggenden Nutzers mitgegeben (*&username=[email]&password=[password]*)
 
 Wenn *Client ID*, *Client Secret* sowie die Zugangsdaten des Nutzers korrekt sind, liefert der Server den *Access Token* sowie einen *Refresh Token* und eine Gültigkeitsdauer zurück.
 
@@ -43,7 +45,7 @@ Mithilfe des *Refresh Tokens* der ursprünglichen Serverantwort kann ein *Access
 Die Serverantwort ist (bei gültigen Daten) identisch zu der ursprünglichen *Access-Token*-Anfrage.
 
 
-## Nutzung des Access Tokens
+## Nutzung des *Access Tokens*
 
 Bei allen weiteren Serveranfragen muss der zuvor generierte *Access Token* als Parameter mitgeschickt werden
 
