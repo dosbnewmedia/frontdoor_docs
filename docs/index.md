@@ -5,7 +5,7 @@ Dieses Dokument beschreibt die offizielle splink-API. Bei Fragen oder Problemen 
 
 Die API ist eine REST-Schnittstelle, die von außen via HTTPS unter api.splink.de erreichbar ist. Alle Daten werden über JSON ausgetauscht.
 
+* [Testumgebung](/testing)
 * [Authentifizierung](/auth)
-* [Testing](/testing)
 * [Definitionen](/definitions)
 * [Operationen](/operations)
