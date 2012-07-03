@@ -9,3 +9,5 @@ Die API ist eine REST-Schnittstelle, die von außen via HTTPS unter api.splink.d
 * [Authentifizierung](https://github.com/dosbnewmedia/frontdoor_docs/blob/master/docs/auth.md)
 * [Definitionen](https://github.com/dosbnewmedia/frontdoor_docs/blob/master/docs/definitions.md)
 * [Operationen](https://github.com/dosbnewmedia/frontdoor_docs/blob/master/docs/operations.md)
+* [Fehler](https://github.com/dosbnewmedia/frontdoor_docs/blob/master/docs/errors.md)
+
