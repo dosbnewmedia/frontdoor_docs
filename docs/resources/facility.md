@@ -98,5 +98,13 @@ Die Attribute *latitude* und *longitude* werden automatisch über eine Geocoding
 		<td>Die UUIDs von 3 zufälligen Vereinen, die zu dieser Sportstätte gehören</td>
 	</tr>
 
+	<tr>
+		<td><strong>teaser_event_ids</strong></td>
+		<td align="center"></td>
+		<td align="center"></td>
+		<td align="center"></td>
+		<td>Die UUIDs von 3 zufälligen Terminen, die an dieser Sportstätte stattfinden</td>
+	</tr>
+
 </table>
 
