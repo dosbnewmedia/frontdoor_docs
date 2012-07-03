@@ -2,8 +2,6 @@
 
 Interner Name: *event*
 
-Der Termin ist eine der zentralen Resourcen bei splink. 
-
 ## Öffentliche Attribute
 
 
@@ -16,7 +14,6 @@ Der Termin ist eine der zentralen Resourcen bei splink.
 		<td>Beschreibung</td>
 	</tr>
 
-	<tr>
 	<tr>
 		<td><strong>name</strong></td>
 		<td align="center">✔</td>
