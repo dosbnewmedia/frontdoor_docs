@@ -13,15 +13,16 @@ Der Termin ist eine der zentralen Resourcen bei splink.
 		<th>Pflicht</th>
 		<th>Durchsuchbar</th>
 		<th>Schreibbar</th>
+		<td>Beschreibung</td>
+	</tr>
+
 	<tr>
 	<tr>
 		<td><strong>name</strong></td>
 		<td align="center">✔</td>
 		<td align="center">✔</td>
 		<td align="center">✔</td>
-	<tr>
-	<tr>
-		<td colspan="4">Der Name des Termins</td>
+		<td>Der Name des Termins</td>
 	</tr>
 
 	<tr>
@@ -29,9 +30,7 @@ Der Termin ist eine der zentralen Resourcen bei splink.
 		<td align="center">✔</td>
 		<td align="center">✔</td>
 		<td align="center">✔</td>
-	<tr>
-	<tr>
-		<td colspan="4">Das Startdatum des Termins</td>
+		<td>Das Startdatum des Termins</td>
 	</tr>
 
 	<tr>
@@ -39,9 +38,7 @@ Der Termin ist eine der zentralen Resourcen bei splink.
 		<td align="center">✔</td>
 		<td align="center">✔</td>
 		<td align="center">✔</td>
-	<tr>
-	<tr>
-		<td colspan="4">Das Enddatum des Termins. Muss nach dem Startdatum liegen.</td>
+		<td>Das Enddatum des Termins. Muss nach dem Startdatum liegen.</td>
 	</tr>
 
 	<tr>
@@ -49,9 +46,7 @@ Der Termin ist eine der zentralen Resourcen bei splink.
 		<td align="center">✔</td>
 		<td align="center"></td>
 		<td align="center">✔</td>
-	<tr>
-	<tr>
-		<td colspan="4">Die Beschreibung des Termins</td>
+		<td>Die Beschreibung des Termins</td>
 	</tr>
 
 	<tr>
@@ -59,9 +54,7 @@ Der Termin ist eine der zentralen Resourcen bei splink.
 		<td align="center">✔</td>
 		<td align="center"></td>
 		<td align="center">✔</td>
-	<tr>
-	<tr>
-		<td colspan="4">Die UUID des Authors</td>
+		<td>Die UUID des Authors</td>
 	</tr>
 
 	<tr>
@@ -69,9 +62,7 @@ Der Termin ist eine der zentralen Resourcen bei splink.
 		<td align="center">✔</td>
 		<td align="center"></td>
 		<td align="center">✔</td>
-	<tr>
-	<tr>
-		<td colspan="4">Die UUID der Sportart dieses Termins</td>
+		<td>Die UUID der Sportart dieses Termins</td>
 	</tr>
 
 	<tr>
@@ -79,9 +70,7 @@ Der Termin ist eine der zentralen Resourcen bei splink.
 		<td align="center">✔</td>
 		<td align="center"></td>
 		<td align="center">✔</td>
-	<tr>
-	<tr>
-		<td colspan="4">Die UUID der Sportstätte diese Termins</td>
+		<td>Die UUID der Sportstätte diese Termins</td>
 	</tr>
 
 	<tr>
@@ -89,9 +78,7 @@ Der Termin ist eine der zentralen Resourcen bei splink.
 		<td align="center"></td>
 		<td align="center"></td>
 		<td align="center"></td>
-	<tr>
-	<tr>
-		<td colspan="4">Die UUIDs der Checkins auf diesem Termin</td>
+		<td>Die UUIDs der Checkins auf diesem Termin</td>
 	</tr>
 
 	<tr>
@@ -99,9 +86,7 @@ Der Termin ist eine der zentralen Resourcen bei splink.
 		<td align="center"></td>
 		<td align="center"></td>
 		<td align="center"></td>
-	<tr>
-	<tr>
-		<td colspan="4">Die UUIDs der Teilnahmebekundungen dieses Termins</td>
+		<td>Die UUIDs der Teilnahmebekundungen dieses Termins</td>
 	</tr>
 
 	<tr>
@@ -109,9 +94,7 @@ Der Termin ist eine der zentralen Resourcen bei splink.
 		<td align="center"></td>
 		<td align="center"></td>
 		<td align="center"></td>
-	<tr>
-	<tr>
-		<td colspan="4">Die UUIDs der Statusmeldungen an diesem Termin</td>
+		<td>Die UUIDs der Statusmeldungen an diesem Termin</td>
 	</tr>
 
 	<tr>
@@ -119,9 +102,7 @@ Der Termin ist eine der zentralen Resourcen bei splink.
 		<td align="center"></td>
 		<td align="center"></td>
 		<td align="center"></td>
-	<tr>
-	<tr>
-		<td colspan="4">Die UUIDs der Fotos zu diesem Termin</td>
+		<td>Die UUIDs der Fotos zu diesem Termin</td>
 	</tr>
 
 	<tr>
@@ -129,9 +110,7 @@ Der Termin ist eine der zentralen Resourcen bei splink.
 		<td align="center"></td>
 		<td align="center"></td>
 		<td align="center"></td>
-	<tr>
-	<tr>
-		<td colspan="4">Die UUIDs der Videos zu diesem Termin</td>
+		<td>Die UUIDs der Videos zu diesem Termin</td>
 	</tr>
 
 	<tr>
@@ -139,9 +118,7 @@ Der Termin ist eine der zentralen Resourcen bei splink.
 		<td align="center"></td>
 		<td align="center"></td>
 		<td align="center"></td>
-	<tr>
-	<tr>
-		<td colspan="4">Die UUIDs der Mediadaten (Fotos und Videos) zu diesem Termin</td>
+		<td>Die UUIDs der Mediadaten (Fotos und Videos) zu diesem Termin</td>
 	</tr>
 
 	<tr>
@@ -149,9 +126,7 @@ Der Termin ist eine der zentralen Resourcen bei splink.
 		<td align="center"></td>
 		<td align="center">✔</td>
 		<td align="center"></td>
-	<tr>
-	<tr>
-		<td colspan="4">Der Status des Termins, enthält einen der folgenden Werte: "past", "current", "upcoming"</td>
+		<td>Der Status des Termins, enthält einen der folgenden Werte: "past", "current", "upcoming"</td>
 	</tr>
 </table>
 
