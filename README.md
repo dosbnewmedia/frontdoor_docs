@@ -1,25 +1,11 @@
-Dokumentation der API
-=====================
 
-Vorraussetzung für den lokalen Server sind Node.js und NPM.
+# Die splink-API
 
-	$ git clone git@github.com:dosbnewmedia/frontdoor_docs.git
-	$ cd frontdoor_docs
+Dieses Dokument beschreibt die offizielle splink-API. Bei Fragen oder Problemen wenden Sie sich bitte an team@splink.de
 
-Module installieren:
+Die API ist eine REST-Schnittstelle, die von außen via HTTPS unter api.splink.de erreichbar ist. Alle Daten werden über JSON ausgetauscht.
 
-	$ npm install
-
-Um CoffeeScript zu nutzen muss entweder der lokale .bin-Ordner zum PATH hinzufgefügt werden
-
-	$ export PATH="./node_modules/.bin:$PATH"
-
-oder CoffeeScript global installiert werden
-
-	$ npm install -g coffee-script
-
-Server starten und API-Seite öffnen:
-
-	$ coffee index
-	$ open http://localhost:5000
-
+* [Testumgebung](docs/testing)
+* [Authentifizierung](docs/auth)
+* [Definitionen](docs/definitions)
+* [Operationen](docs/operations)
