@@ -12,11 +12,6 @@ Die folgenden Verben können genutzt werden, um mit der API zu kommunizieren:
 
 Daten werden über JSON mit der API ausgetauscht.
 
-## Datenstruktur
-
-Die splink-Datenbank, die über die API erreichbar ist, ist eine Graph-Datenbank. Sie besteht aus Knoten, die über Kanten miteinander verknüpft sind. Die Kanten stellen die Beziehungen der Knoten untereinander dar.
-
-**Beispiel** Wenn ein Nutzer ein Bild *toppt*, wird in der Datenbank eine Kante vom Typ *Like* zwischen dem Knoten des Nutzers (vom Typ *User*) und dem Knoten des Bildes (vom Typ *EventPhoto* angelegt.
 
 ## IDs
 
