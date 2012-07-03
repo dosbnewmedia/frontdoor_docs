@@ -9,17 +9,13 @@ Zunächst muss mithilfe einer *Client ID* und eines *Client Tokens* ein *Access 
 
 Da diese Vorgehensweise dem Prinzip von OAuth widerspricht, ist sie auf dem Production-System nicht vorgesehen. In Kürze wird die API erweitert, so dass OAuth-konform ein Login bei splink stattfinden muss und ein *Access Token* an eine Callback-URL zurückgeschickt wird.
 
-
 ## *Access Token* via Email-Adresse und Passwort
 
 In der Testumgebung ist zur Zeit gestattet, einen *Access Token* über die direkte Übermittlung von Email-Adresse und Passwort zu generieren.
 
-	$ curl -u 'usr:pw' -vd 'grant_type=password&\
-		client_id=[id]&client_secret=[secret]&\
-		username=[email]&password=[password]' \
-		'http://api.testing.splink.de/oauth2/token'
+	$ curl -u 'username:password' -vd 'grant_type=password&client_id=[id]&client_secret=[secret]&username=[email]&password=[password]''http://api.testing.splink.de/oauth2/token
 
-**Hinweis:** In dieser Anfrage sind zwei Zugangsdaten-Paare enthalten: Zum einen ist die [Testumgebung](/testing) mit BasicAuth vor jeglichen Zugriffen geschützt (*-u 'usr:pw'*). Diese Zugangsdaten erhalten Sie auf Anfrage. Weiterhin werden in den Parametern der curl-URL die Zugangsdaten des einzuloggenden Nutzers mitgegeben (*&username=[email]&password=[password]*)
+**Hinweis:** In dieser Anfrage sind zwei Zugangsdaten-Paare enthalten: Zum einen ist die [Testumgebung](/testing) mit BasicAuth vor jeglichen Zugriffen geschützt (*-u 'username:password'*). Diese Zugangsdaten erhalten Sie auf Anfrage. Weiterhin werden in den Parametern der curl-URL die Zugangsdaten des einzuloggenden Nutzers mitgegeben (*&username=[email]&password=[password]*)
 
 Wenn *Client ID*, *Client Secret* sowie die Zugangsdaten des Nutzers korrekt sind, liefert der Server den *Access Token* sowie einen *Refresh Token* und eine Gültigkeitsdauer zurück.
 
@@ -35,12 +31,9 @@ Die Gültigkeitsdauer ist die Anzahl Sekunden, die der *Access Token* ab jetzt g
 
 ## Abgelaufenen *Access Token* erneuern
 
-Mithilfe des *Refresh Tokens* der ursprünglichen Serverantwort kann ein *Access Token* erneuert werden. Dabei wird sowohl ein neuer *Access Token* als auch ein neuer *Refresh Token* generiert und zurückgeliefert, die alten werden invalidiert.
+Mithilfe des *Refresh Tokens* der ursprünglichen Serverantwort kann ein *Access Token* erneuert werden. Dabei wird sowohl ein neuer *Access Token* als auch ein neuer *Refresh Token* generiert und zurückgeliefert, die alten Tokens werden invalidiert.
 
-	$ curl -u 'usr:pw' -vd 'grant_type=password&\
-		client_id=[id]&client_secret=[secret]&\
-		refresh_token=[refresh_token]'\
-		'http://api.testing.splink.de/oauth2/token'
+	$ curl -u 'username:password' -vd 'grant_type=password&client_id=[id]&client_secret=[secret]&refresh_token=[refresh_token]' 'http://api.testing.splink.de/oauth2/token'
 
 Die Serverantwort ist (bei gültigen Daten) identisch zu der ursprünglichen *Access-Token*-Anfrage.
 
@@ -53,7 +46,11 @@ Bei allen weiteren Serveranfragen muss der zuvor generierte *Access Token* als P
 
 In der Testumgebung sind zusätzlich die BasicAuth-Zugangsdaten erforderlich:
 
-	$ curl -u 'usr:pw' 'http://api.testing.splink.de/\
-			events?access_token=…
+	$ curl -u 'username:password' 'http://api.testing.splink.de/events?access_token=…
 
+Der *Access Token* ist an den Nutzer gebunden, dessen Zugangsdaten übermittelt wurden. Das bedeutet alle folgenden Aktionen mit diesem Token werden im Namen des Nutzers ausgeführt. 
+
+**Beispiel:** Der Autor eines Termins, der mit dem *Access Token* über die API angelegt wird, ist der Nutzer, mit dem der *Access Token* angefordert wurde.
+
+Das bedeutet, dass über die API nur Aktionen durchgeführt werden, die dem Nutzer erlaubt sind. Das Bearbeiten eines Termins eines anderen Nutzers ist zum Beispiel nicht möglich.
 
