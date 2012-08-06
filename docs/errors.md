@@ -15,8 +15,7 @@ Bei fehlerhaften API-Anfragen werden die Fehler im folgenden Format zurückgelie
 	  }
 	}
 	
-Das *errors*-Objekt enthält die betroffenen Resourcen (z.B. *User*) und darin die Attribute, für die Fehler festgestellt wurden. Oder aber den 
-den Begriff *base*, wenn sich der Fehler nicht eindeutig einem Attribut zuordnen lässt (typisch dafür ist ein uniqueness constraint, das sich auf mehrere Attribute bezieht.)
+Das *errors*-Objekt enthält die betroffenen Resourcen (z.B. *User*) und darin die Attribute, für die Fehler festgestellt wurden. Oder aber den  Begriff *base*, wenn sich der Fehler nicht eindeutig einem Attribut zuordnen lässt (typisch dafür ist ein uniqueness constraint, das sich auf mehrere Attribute bezieht.)
 Zum Beispiel:
 
 	{
