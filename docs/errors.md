@@ -15,7 +15,27 @@ Bei fehlerhaften API-Anfragen werden die Fehler im folgenden Format zurückgelie
 	  }
 	}
 	
-Das *errors*-Objekt enthält die betroffenen Resourcen (z.B. *User*) oder den Begriff *base*, der aussagt, dass der Fehler keine Resource betrifft sondern 
+Das *errors*-Objekt enthält die betroffenen Resourcen (z.B. *User*) und darin die Attribute, für die Fehler festgestellt wurden. Oder aber den 
+den Begriff *base*, wenn sich der Fehler nicht eindeutig einem Attribut zuordnen lässt (typisch dafür ist ein uniqueness constraint, das sich auf mehrere Attribute bezieht.)
+Zum Beispiel:
+
+	{
+	  "code": 422,
+	  "errors": {
+	    "team_memberships": {
+	      "base": [
+	        {
+	          "attribute_combination_must_be_unique": [
+	            "user_id",
+	            "team_id"
+	          ]
+	        }
+	      ]
+	    }
+	  }
+	}
+
+
 
 Bei den API-Anfragen können die folgenden Fehlermeldungen zurückgegeben werden:
 
