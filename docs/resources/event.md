@@ -71,54 +71,6 @@ Interner Name: *event*
 	</tr>
 
 	<tr>
-		<td><strong>check_in_ids</strong></td>
-		<td align="center"></td>
-		<td align="center"></td>
-		<td align="center"></td>
-		<td>Die UUIDs der Checkins auf diesem Termin</td>
-	</tr>
-
-	<tr>
-		<td><strong>participation_ids</strong></td>
-		<td align="center"></td>
-		<td align="center"></td>
-		<td align="center"></td>
-		<td>Die UUIDs der Teilnahmebekundungen dieses Termins</td>
-	</tr>
-
-	<tr>
-		<td><strong>post_ids</strong></td>
-		<td align="center"></td>
-		<td align="center"></td>
-		<td align="center"></td>
-		<td>Die UUIDs der Statusmeldungen an diesem Termin</td>
-	</tr>
-
-	<tr>
-		<td><strong>photo_ids</strong></td>
-		<td align="center"></td>
-		<td align="center"></td>
-		<td align="center"></td>
-		<td>Die UUIDs der Fotos zu diesem Termin</td>
-	</tr>
-
-	<tr>
-		<td><strong>video_ids</strong></td>
-		<td align="center"></td>
-		<td align="center"></td>
-		<td align="center"></td>
-		<td>Die UUIDs der Videos zu diesem Termin</td>
-	</tr>
-
-	<tr>
-		<td><strong>mediafile_ids</strong></td>
-		<td align="center"></td>
-		<td align="center"></td>
-		<td align="center"></td>
-		<td>Die UUIDs der Mediadaten (Fotos und Videos) zu diesem Termin</td>
-	</tr>
-
-	<tr>
 		<td><strong>event_status</strong></td>
 		<td align="center"></td>
 		<td align="center">✔</td>
