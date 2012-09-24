@@ -13,7 +13,7 @@ Da diese Vorgehensweise dem Prinzip von OAuth widerspricht, ist sie auf dem Prod
 
 In der Testumgebung ist zur Zeit gestattet, einen *Access Token* über die direkte Übermittlung von Email-Adresse und Passwort zu generieren.
 
-	$ curl -u 'username:password' -vd 'grant_type=password&client_id=[id]&client_secret=[secret]&username=[email]&password=[password]''http://api.testing.splink.de/oauth2/token
+	$ curl -u 'username:password' -vd 'grant_type=password&client_id=[id]&client_secret=[secret]&username=[email]&password=[password]' 'http://api.testing.splink.de/oauth2/token
 
 **Hinweis:** In dieser Anfrage sind zwei Zugangsdaten-Paare enthalten: Zum einen ist die [Testumgebung](/testing) mit BasicAuth vor jeglichen Zugriffen geschützt (*-u 'username:password'*). Diese Zugangsdaten erhalten Sie auf Anfrage. Weiterhin werden in den Parametern der curl-URL die Zugangsdaten des einzuloggenden Nutzers mitgegeben (*&username=[email]&password=[password]*)
 
@@ -28,6 +28,15 @@ Wenn *Client ID*, *Client Secret* sowie die Zugangsdaten des Nutzers korrekt sin
 	}
 
 Die Gültigkeitsdauer ist die Anzahl Sekunden, die der *Access Token* ab jetzt gültig ist.
+
+## *Access Token* via Facebook-ID und -Token
+
+Es ist in jeder Umgebung möglich, einen User über seinen Facebook-Account bei *splink* einzuloggen. Dazu muss der folgene Request an die API geschickt werden:
+
+	$ curl -u 'username:password' -vd 'grant_type=authorization_code&client_id=[id]&client_secret=[secret]&code=fb:[id]:[token]' 'http://api.testing.splink.de/oauth2/token
+
+Facebook-ID und -Token werden in dem Query-Parameter *code* kombiniert. Die API nutzt bei dieseer Authentifizierung die übermittelten Daten um einen serverseitigen Facebook-Login durchzuführen. Ist dieser erfolgreich, erhält man auch hier die bereits oben beschriebenen JSON-Daten mit *Access Token*, *Refresh Token*, etc.
+
 
 ## Abgelaufenen *Access Token* erneuern
 
@@ -48,7 +57,7 @@ In der Testumgebung sind zusätzlich die BasicAuth-Zugangsdaten erforderlich:
 
 	$ curl -u 'username:password' 'http://api.testing.splink.de/events?access_token=…
 
-Der *Access Token* ist an den Nutzer gebunden, dessen Zugangsdaten übermittelt wurden. Das bedeutet alle folgenden Aktionen mit diesem Token werden im Namen des Nutzers ausgeführt. 
+Der *Access Token* ist an den Nutzer gebunden, dessen Zugangsdaten übermittelt wurden. Das bedeutet alle folgenden Aktionen mit diesem Token werden im Namen des Nutzers ausgeführt.
 
 **Beispiel:** Der Autor eines Termins, der mit dem *Access Token* über die API angelegt wird, ist der Nutzer, mit dem der *Access Token* angefordert wurde.
 
